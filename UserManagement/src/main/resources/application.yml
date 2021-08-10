@@ -1,0 +1,37 @@
+server:
+  port: 2020
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    password: ''
+    url: jdbc:h2:mem:testdb
+    username: sa
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update        
+    defer-datasource-initialization: true
+    
+  mail:
+    host:  smtp.gmail.com
+    port: 587
+    username: 
+    password: 
+    properties:
+       mail:
+          smtp:
+             starttls:
+                enable: true
+             auth: true   
+app:
+ messages:
+ 
+   Invalid Credentials: Invalid Credentials
+   AccLocked: Your Account is Locked
+   SUCCESS: SUCCESS
+   LOCKED: LOCKED
+   
+   UserRegSuccess: You Register SucessFully go to mail unlock the account
+   UserRegFailed: Some problem here You not Registered
+   UnlockAccEmailBodyFileStroredArea: UNLOCK_ACCOUNT_EMAIL_BODY_TEMPLATE.txt
+   UnlockAccountEmailSubject: Registation Success Unlock the account |UserManagement Team
